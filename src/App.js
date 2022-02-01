@@ -23,7 +23,10 @@ function App() {
           foodId={foodId}
           drinkId={drinkId}
           sideId={sideId} />
-      
+        <InstructionsList instructions={instructions} />
+      </div>
+      <div className='order-form'>
+
       </div>
     </div>
   );
