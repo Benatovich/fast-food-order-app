@@ -4,7 +4,7 @@ export default function FoodDropdown({ setFoodId }) {
   }
   return (
     <div>
-            Select a Sandwich:
+      <p>Select a Sandwich: </p>
       <select onChange={handleChange}>
         <option value='1'>Chicken Sandwich</option>
         <option value='2'>Veggie Sub</option>

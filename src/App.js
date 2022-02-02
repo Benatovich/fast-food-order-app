@@ -29,8 +29,8 @@ function App() {
         <FoodDropdown setFoodId={setFoodId} />
         <DrinkDropdown setDrinkId={setDrinkId} />
         <SideDropdown setSideId={setSideId} />
-        {/* <OrderNameInput setOrderName={setOrderName} />
-        <InstructionsForm 
+        <OrderNameInput setOrderName={setOrderName} />
+        {/* <InstructionsForm 
           instructions={instructions}
           setInstructions={setInstructions} /> */}
       </div>

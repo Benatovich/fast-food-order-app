@@ -4,7 +4,7 @@ export default function SideDropdown({ setSideId }) {
   }
   return (
     <div>
-      Select a Side:
+      <p>Select a Side:</p>
       <select onChange={handleChange}>
         <option value='1'>Hashbrowns</option>
         <option value='2'>Fries</option>
