@@ -26,7 +26,13 @@ function App() {
         <InstructionsList instructions={instructions} />
       </div>
       <div className='order-form'>
-
+        <FoodDropdown setFoodId={setFoodId} />
+        <DrinkDropdown setDrinkId={setDrinkId} />
+        <SideDropdown setSideId={setSideId} />
+        {/* <OrderNameInput setOrderName={setOrderName} />
+        <InstructionsForm 
+          instructions={instructions}
+          setInstructions={setInstructions} /> */}
       </div>
     </div>
   );
