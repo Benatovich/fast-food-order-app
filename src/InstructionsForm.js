@@ -15,10 +15,10 @@ export default function InstructionsForm({ setInstructions, instructions }) {
     <section>
       <form onSubmit={handleSubmit}>
         <label>
-                    New instruction
+                    Add instructions: 
           <input value={instructionInForm} onChange={e => setInstructionInForm(e.target.value)} />
         </label>
-        <button>Add instructions</button>
+        <button>Customize</button>
       </form>
     </section>
   );

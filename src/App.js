@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import FoodDropdown from './FoodDropdown';
-import DrinkDropdown from './DrinkDropdown';
-import SideDropdown from './SideDropdown';
+// import FoodDropdown from './FoodDropdown';
+// import DrinkDropdown from './DrinkDropdown';
+// import SideDropdown from './SideDropdown';
+import Dropdown from './Dropdown';
 import OrderNameInput from './OrderNameInput';
 import OrderImages from './OrderImages';
 import InstructionsForm from './InstructionsForm';
@@ -26,9 +27,18 @@ function App() {
         <InstructionsList instructions={instructions} />
       </div>
       <div className='order-form'>
-        <FoodDropdown setFoodId={setFoodId} />
-        <DrinkDropdown setDrinkId={setDrinkId} />
-        <SideDropdown setSideId={setSideId} />
+        <Dropdown 
+          handleChange={setFoodId}
+          title='Food'
+          options={['Chicken Sandwich', 'Veggie Sub', 'Breakfast Sandwich']} />
+        <Dropdown 
+          handleChange={setDrinkId}
+          title='Drink'
+          options={['Soda', 'Coffee', 'Juice']} />
+        <Dropdown 
+          handleChange={setSideId}
+          title='Side'
+          options={['Hashbrowns', 'Fries', 'Apple Slices']} />
         <OrderNameInput setOrderName={setOrderName} />
         <InstructionsForm 
           instructions={instructions}
