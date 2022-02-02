@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+// import OrderForm from './OrderForm';
+// import OrderDisplay from './OrderDisplay';
+import Dropdown from './Dropdown';
+import OrderNameInput from './OrderNameInput';
+import OrderImages from './OrderImages';
+import InstructionsForm from './InstructionsForm';
+import InstructionsList from './InstructionsList';
 
 function App() {
+  const [foodId, setFoodId] = useState(1);
+  const [drinkId, setDrinkId] = useState(1);
+  const [sideId, setSideId] = useState(1);
+  const [orderName, setOrderName] = useState('customer');
+  const [instructions, setInstructions] = useState([]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='order'>
+        <h3 className='order-name'>Order for {orderName}</h3>
+        <OrderImages
+          foodId={foodId}
+          drinkId={drinkId}
+          sideId={sideId} />
+        <InstructionsList instructions={instructions} />
+      </div>
+      <div className='order-form'>
+        <Dropdown 
+          handleChange={setFoodId}
+          title='Food'
+          options={['Chicken Sandwich', 'Veggie Sub', 'Breakfast Sandwich']} />
+        <Dropdown 
+          handleChange={setDrinkId}
+          title='Drink'
+          options={['Soda', 'Coffee', 'Juice']} />
+        <Dropdown 
+          handleChange={setSideId}
+          title='Side'
+          options={['Hashbrowns', 'Fries', 'Apple Slices']} />
+        <OrderNameInput setOrderName={setOrderName} />
+        <InstructionsForm 
+          instructions={instructions}
+          setInstructions={setInstructions} />
+      </div>
     </div>
   );
 }
