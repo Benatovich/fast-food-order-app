@@ -11,7 +11,7 @@ export default function InstructionsList({ instructions }) {
   });
   return (
     <ul className='instructions-list'>
-      <h2>Instructions: </h2>
+      <h2>Special Instructions: </h2>
       {instructionsEl}
     </ul>
   );
