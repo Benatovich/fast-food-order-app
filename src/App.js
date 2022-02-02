@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-// import FoodDropdown from './FoodDropdown';
-// import DrinkDropdown from './DrinkDropdown';
-// import SideDropdown from './SideDropdown';
+// import OrderForm from './OrderForm';
+// import OrderDisplay from './OrderDisplay';
 import Dropdown from './Dropdown';
 import OrderNameInput from './OrderNameInput';
 import OrderImages from './OrderImages';
